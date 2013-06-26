@@ -1,0 +1,132 @@
+<Project>
+  <Name>facerecog</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>FaceRecognitionLibrary.dll</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ImageInfo</Name>
+        <Access>Public</Access>
+        <Location left="727" top="590" />
+        <Size width="198" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String imageId</Member>
+        <Member type="Field">public String dbpath</Member>
+        <Member type="Field">public Int32 size</Member>
+        <Member type="Field">public Byte[] bytes</Member>
+        <Member type="Constructor">public ImageInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserInfo</Name>
+        <Access>Public</Access>
+        <Location left="224" top="590" />
+        <Size width="220" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String userId</Member>
+        <Member type="Field">public String userName</Member>
+        <Member type="Field">public String GoogleOpenId</Member>
+        <Member type="Field">public UserType type</Member>
+        <Member type="Field">private List&lt;ImageInfo&gt; images</Member>
+        <Member type="Constructor">public UserInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DbConnector</Name>
+        <Access>Public</Access>
+        <Location left="648" top="290" />
+        <Size width="282" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String server</Member>
+        <Member type="Field">public String port</Member>
+        <Member type="Field">public String userId</Member>
+        <Member type="Field">public String password</Member>
+        <Member type="Field">public String connectionString</Member>
+        <Member type="Constructor">public DbConnector()</Member>
+        <Member type="Method">public UserInfo GetUserInfo(String id)</Member>
+        <Member type="Method">public ImageInfo GetImageInfo(String id)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MatlabConnector</Name>
+        <Access>Public</Access>
+        <Location left="648" top="12" />
+        <Size width="282" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String executionPath</Member>
+        <Member type="Field">public String connectionString</Member>
+        <Member type="Constructor">public MatlabConnector()</Member>
+        <Member type="Method">public Byte[] DetectFace(Byte[] input)</Member>
+        <Member type="Method">public Byte[] AlignFace(Byte[] input)</Member>
+        <Member type="Method">public Byte[] ExtractFeature(Byte[] input)</Member>
+        <Member type="Method">public UserInfo MatchFace(Byte[] input)</Member>
+        <Member type="Method">public FaceRecognitionState GetAlgoState()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FaceRecognitionController</Name>
+        <Access>Public</Access>
+        <Location left="224" top="12" />
+        <Size width="236" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;UserInfo&gt; users</Member>
+        <Member type="Field">public MatlabConnector mConn</Member>
+        <Member type="Field">public DbConnector dbConn</Member>
+        <Member type="Constructor">public FaceRecognitionController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>UserType</Name>
+        <Access>Public</Access>
+        <Location left="224" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>admin = 0</Value>
+        <Value>user = 1</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>FaceRecognitionState</Name>
+        <Access>Public</Access>
+        <Location left="486" top="590" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>FaceDetection = 0</Value>
+        <Value>FaceAlignment = 1</Value>
+        <Value>FeatureExtraction = 2</Value>
+        <Value>FeatureMatching = 3</Value>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>type</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>mConn</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>dbConn</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
