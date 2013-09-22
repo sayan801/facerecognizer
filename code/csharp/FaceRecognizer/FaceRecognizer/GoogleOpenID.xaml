@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="151" d:DesignWidth="492">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,15 +15,31 @@
 
     <DockPanel LastChildFill="True"  >
         <Label DockPanel.Dock="Top" Background="#FF0966DF" Foreground="#FFFCFDFF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Google Open ID</Label>
-        <UniformGrid  Name="upinfo" Background="White" DockPanel.Dock="Top" Columns="4">
+        <UniformGrid  Name="upinfo" Background="White" DockPanel.Dock="Top" Columns="5">
+            <Label></Label>
+            <Label></Label>
+            <Label></Label>
 
+            <DockPanel LastChildFill="True">
+                <Label DockPanel.Dock="top"></Label>
+                <Image  DockPanel.Dock="top" Height="68" HorizontalAlignment="Left"  Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="193" Source="/FaceRecognizer;component/Images/wpid-photo-jan-14-2013-1115-am.jpg" />
+                <UniformGrid Columns="2" DockPanel.Dock="Top">
+                
+                <Label >User ID</Label>
+                <TextBox Name="idlinkTB"></TextBox>
+                <Label >Password</Label>
+                <PasswordBox Height="39"/>
 
+                <Button Name="cancelBtn" Style="{StaticResource ControlBtnStyle}" >Cancel</Button>
+                <Button Name="loginBtn" Style="{StaticResource ControlBtnStyle}" >Login</Button>
+                
+        </UniformGrid>
+                <Label DockPanel.Dock="Bottom"></Label>
+            </DockPanel>
 
         </UniformGrid>
 
-        <UniformGrid DockPanel.Dock="Bottom">
-
-        </UniformGrid>
+        
     </DockPanel>
 
 </UserControl>
