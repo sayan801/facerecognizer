@@ -1,0 +1,22 @@
+﻿<Window x:Class="FaceRecognizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" MinHeight="560" MinWidth="1000" WindowState="Maximized" Background="#FF6B736D">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FaceRecognizerStyle;component/ControlStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <DockPanel LastChildFill="True">
+
+        <Button Style="{StaticResource MainBtnStyle}"/>
+
+
+    </DockPanel>
+
+
+</Window>
