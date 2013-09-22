@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognizer", "FaceRecognizer\FaceRecognizer.csproj", "{D696389A-ACC0-4647-B446-77D648D4627A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognizerUI", "FaceRecognizer\FaceRecognizerUI.csproj", "{D696389A-ACC0-4647-B446-77D648D4627A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognizerStyle", "FaceRecognizerStyle\FaceRecognizerStyle.csproj", "{80E30FC9-D016-427E-9811-CA0412FBEE9B}"
 EndProject

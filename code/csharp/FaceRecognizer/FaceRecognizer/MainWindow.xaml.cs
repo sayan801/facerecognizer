@@ -23,5 +23,35 @@ namespace FaceRecognizer
         {
             InitializeComponent();
         }
+
+        private void recognizeFace_Click(object sender, RoutedEventArgs e)
+        {
+            FaceRecognizer.RecognizeFace recognizeFaceobj = new FaceRecognizer.RecognizeFace();
+            infodocP.Children.Clear();
+            infodocP.Children.Add(recognizeFaceobj);
+        }
+
+        private void registerImages_Click(object sender, RoutedEventArgs e)
+        {
+            FaceRecognizer.RegisterImages registerImagesobj = new FaceRecognizer.RegisterImages();
+            infodocP.Children.Clear();
+            infodocP.Children.Add(registerImagesobj);
+        }
+
+        private void createAccount_Click(object sender, RoutedEventArgs e)
+        {
+            FaceRecognizer.CreateAccount createAccountobj = new FaceRecognizer.CreateAccount();
+            infodocP.Children.Clear();
+            infodocP.Children.Add(createAccountobj);
+        }
+
+        private void googleOpenID_Click(object sender, RoutedEventArgs e)
+        {
+            FaceRecognizer.GoogleOpenID googleOpenIDobj = new FaceRecognizer.GoogleOpenID();
+            infodocP.Children.Clear();
+            infodocP.Children.Add(googleOpenIDobj);
+        }
+
+
     }
 }

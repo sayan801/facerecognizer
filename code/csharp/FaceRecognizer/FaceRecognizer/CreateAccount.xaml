@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="FaceRecognizer.CreateAccount"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="317" d:DesignWidth="592">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FaceRecognizerStyle;component/ControlStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True"  >
+        <Label DockPanel.Dock="Top" Background="#FF0966DF" Foreground="#FFFCFDFF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Create Account</Label>
+        <DockPanel LastChildFill="True">
+<UniformGrid DockPanel.Dock="Left" Columns="2">
+                <Grid DockPanel.Dock="Left">
+                <Image Name="prdctimgPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203"></Image>
+                <TextBox Name="prdctimagelinkTB" Margin="14,154,100,8" Width="117" Height="39"></TextBox>
+                <Button Name="prdctbrowseBtn" Style="{StaticResource ControlBtnStyle}" Margin="137,154,6,8" Height="39" Width="88">Browse</Button>
+            </Grid>
+            
+            <UniformGrid DockPanel.Dock="Right" Columns="2">
+                <Label Style="{StaticResource LblStyle}" >Name</Label>
+                <TextBox Name="nameTB"></TextBox>
+                <Label Style="{StaticResource LblStyle}" >Address</Label>
+                <TextBox Name="addressTB"></TextBox>
+                <Label  Style="{StaticResource LblStyle}" >Phone</Label>
+                    <TextBox Name="phoneTB"></TextBox>
+                    <Label  Style="{StaticResource LblStyle}" >Email</Label>
+                    <TextBox Name="emailTB"></TextBox>
+                    <Label  Style="{StaticResource LblStyle}" >Occupation</Label>
+                    <TextBox Name="occupationTB"></TextBox>
+                    <Label  Style="{StaticResource LblStyle}" >Remark</Label>
+                <TextBox Name="productdescriptionTB"></TextBox>
+                <Button Name="resetBtn" Style="{StaticResource ControlBtnStyle}" >Reset</Button>
+                <Button Name="submitBtn" Style="{StaticResource ControlBtnStyle}">Submit</Button>
+            </UniformGrid>
+            </UniformGrid>
+        </DockPanel>
+    </DockPanel>
+
+</UserControl>
