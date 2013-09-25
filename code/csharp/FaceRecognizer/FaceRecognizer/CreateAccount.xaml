@@ -18,7 +18,7 @@
         <DockPanel LastChildFill="True">
 <UniformGrid DockPanel.Dock="Left" Columns="2">
                 <Grid DockPanel.Dock="Left">
-                <Image Name="prdctimgPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203"></Image>
+                <Image Name="prdctimgPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203" Source="/FaceRecognizer;component/Images/2.jpg"></Image>
                 <TextBox Name="prdctimagelinkTB" Margin="14,154,100,8" Width="117" Height="39"></TextBox>
                 <Button Name="prdctbrowseBtn" Style="{StaticResource ControlBtnStyle}" Margin="137,154,6,8" Height="39" Width="88">Browse</Button>
             </Grid>

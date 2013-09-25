@@ -22,18 +22,18 @@
 
                 <Grid>
                     
-                        <Image Name="captureLeftViewPhoto" Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203"></Image>
+                        <Image Name="captureLeftViewPhoto" Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203" Source="/FaceRecognizer;component/Images/1.jpg"></Image>
                     
                     <Button Name="captureLeftViewBtn" Style="{StaticResource ControlBtnStyle}" Margin="57,242,56,96" Height="39" Width="203">Capture Left View</Button>
                 </Grid>
 
                 <Grid>
-                    <Image Name="captureFrontViewPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203"></Image>
+                    <Image Name="captureFrontViewPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203" Source="/FaceRecognizer;component/Images/2.jpg"></Image>
                     <Button Name="captureFrontViewBtn" Style="{StaticResource ControlBtnStyle}" Margin="57,242,56,96" Height="39" Width="203">Capture Front View</Button>
                 </Grid>
 
                 <Grid>
-                    <Image Name="captureRightViewPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203"></Image>
+                    <Image Name="captureRightViewPhoto"  Stretch="Uniform" Height="142" Margin="14,6,14,53" Width="203" Source="/FaceRecognizer;component/Images/4.jpg"></Image>
                     <Button Name="captureRightViewBtn" Style="{StaticResource ControlBtnStyle}" Margin="57,242,56,96" Height="39" Width="203">Capture Right View</Button>
                 </Grid>
 
