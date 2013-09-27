@@ -74,23 +74,3 @@ if(proceed)
     
 end
 disp('Finished demo.')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

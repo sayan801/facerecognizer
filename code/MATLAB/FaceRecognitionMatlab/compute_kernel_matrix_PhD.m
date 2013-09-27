@@ -75,21 +75,4 @@ elseif strcmp(kernel_type,'fpp')==1
 elseif strcmp(kernel_type,'tanh')==1
     kermat = tanh(X'*Y+kernel_args(1));
 end
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
